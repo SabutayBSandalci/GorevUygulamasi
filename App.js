@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import UrunList from "./components/UrunList";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Ürün Listesi</Text>
+      <UrunList />
     </View>
   );
 }
@@ -13,8 +14,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    justifyContent: "flex-start",
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginVertical: 20,
+    marginTop: 50, 
+    textAlign: "center", 
   },
 });
